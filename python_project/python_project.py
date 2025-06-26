@@ -1,4 +1,4 @@
-# Lista de libros como diccionarios
+
 libros = [
     {"titulo": "Cien años de soledad", "autor": "Gabriel García Márquez", "año": 1967},
     {"titulo": "1984", "autor": "George Orwell", "año": 1949},
@@ -7,13 +7,13 @@ libros = [
     {"titulo": "Crónica de una muerte anunciada", "autor": "Gabriel García Márquez", "año": 1981}
 ]
 
-# Función para mostrar libros
+
 def mostrar_libros(lista):
     for libro in lista:
         print(f"{libro['titulo']} - {libro['autor']} ({libro['año']})")
     print()
 
-# Función para ordenar libros
+
 def ordenar_libros(criterio):
     if criterio in ["titulo", "autor", "año"]:
         return sorted(libros, key=lambda x: x[criterio])
@@ -21,7 +21,7 @@ def ordenar_libros(criterio):
         print("Criterio no válido. Usa: 'titulo', 'autor' o 'año'.")
         return libros
 
-# Menú interactivo
+
 def menu():
     print("¿Cómo quieres ordenar la lista de libros?")
     print("1. Por título")
@@ -42,5 +42,5 @@ def menu():
     print("\nLista de libros ordenada:")
     mostrar_libros(ordenados)
 
-# Ejecutar menú
+
 menu()
